@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+:root{
+    font-family: 'Inter', sans-serif;
+}
+
+html,body{
+  scroll-behavior: smooth;
+}
+
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.mouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 14px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.scroll-ball {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce-ball 1.5s infinite;
+}
+
+@keyframes bounce-ball {
+  0%, 100% {
+    top: 8px;
+    opacity: 0.8;
+  }
+  50% {
+    top: 20px;
+    opacity: 0.3;
+  }
+}
+
+.scroll-text {
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 4px;
+  padding: 1px 30px;
+  animation: fadein 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadein {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
