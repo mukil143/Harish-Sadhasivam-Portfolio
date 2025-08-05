@@ -7,7 +7,7 @@ import { FaTwitter } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className='mb-14  flex items-center  justify-between  py-6'>
+    <nav className='mb-14  flex items-center   justify-between  py-6'>
         <div className=" flex flex-shrink-0 items-center justify-center">
             <img   typeof='image/png' className="  w-12" src={Logo} alt="" />
         </div>

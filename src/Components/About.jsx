@@ -4,7 +4,7 @@ import About_img from '../assets/About_img.png'
 import {ABOUT_TEXT} from '../constants'
 const About = () => {
   return (
-    <div className="container mx-auto border-b border-neutral-900 pb-4  ">
+    <div className="   border-b border-neutral-900 pb-4  ">
         <h2 className="text-center my-20 text-4xl font-light">About <span className='font-thin'>Me</span></h2>
         <div className="flex flex-col lg:flex-row ">
             <div className="w-full lg:w-1/2 lg:p-8">

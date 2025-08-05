@@ -5,7 +5,7 @@ import { FaArrowDownLong } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <div className='border-b h-full   border-neutral-900 pb-4 lg:mb-36'>
+    <div className='border-b    border-neutral-900 pb-4 lg:mb-36'>
         <div className="flex flex-col justify-around md:flex-row lg:flex-row ">
 
         <div className="w-full relative md:w-1/2 lg:max-w-1/2">
