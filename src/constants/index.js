@@ -1,73 +1,69 @@
-// import project1 from "../assets/projects/project-1.jpg";
-// import project2 from "../assets/projects/project-2.jpg";
-// import project3 from "../assets/projects/project-3.jpg";
+import project1 from "../assets/projects/project-1.png";
+import project2 from "../assets/projects/project-2.png";
+import project3 from "../assets/projects/project-3.png";
 // import project4 from "../assets/projects/project-4.jpg";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `Hi, I'm a passionate Senior Technical Trainer and former Software Engineer with a solid foundation in backend development, cloud systems, and technical education. I specialize in building scalable backend systems using Java, Spring Boot, and MongoDB/PostgreSQL — and I love simplifying complex tech for learners to boost their industry readiness.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `, a Senior Technical Trainer and ex-Software Engineer passionate about backend systems and teaching.
+💻 I specialize in Java, Spring Boot, MongoDB, and building scalable REST APIs with secure, real-world architectures.
+🧑‍🏫 At Six Phrase, I design hands-on training that bridges the gap between academics and industry, boosting job-readiness.
+🌐 At HCL, I worked on cloud migration, performance tuning, and secure backend development.
+🚀 My projects include a secure banking API, real-time ride-sharing backend, and a ticket booking system.
+📍 Based in Erode, I love mentoring, learning new tech, and helping others grow in their careers.
+`;
 
 export const EXPERIENCES = [
   {
     year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    role: "Senior Technical Trainer",
+    company: "Six Phrase Edu Tech Pvt Ltd.",
+    location:"Coimbatore, Tamil Nadu",
+    description: `Conducted career-focused technical training sessions emphasizing hands-on project work and industry-relevant skills. Delivered in-depth training on Java, Spring Boot, WebSocket, and RESTful API development, enabling students to become job-ready with practical backend and real-time web application experience.`,
+    technologies: ["Java", "Spring Boot", "WebSocket", "REST APIs"],
   },
   {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
+    year: "2021 - 2023",
     role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    company: "HCL Technologies Ltd",
+    location:"Bangalore , Karnataka",
+    description: `Worked on backend application development and performance tuning tasks. Contributed to large-scale cloud migration projects, ensuring smooth transition with minimal downtime. Completed comprehensive full-stack development training under the HCL TSS program.`,
+    technologies: ["Backend development", "cloud migration", "performance tuning"],
+  },
+
+  {
+    year: "2021  - 2021",
+    role: "Quality Engineer",
+    company: "NCR Corporation India Pvt Ltd",
+    location:"Chennai , Tamil Nadu",  
+    description: `Implemented Six Sigma methodologies to improve ATM software reliability, resulting in a 30% reduction in defects. Collaborated with cross-functional teams to identify quality issues and streamline processes.`,
+    technologies: ["Introduced Six Sigma processes, reducing ATM defects by 30%"],
   },
 ];
 
-// export const PROJECTS = [
-//   {
-//     title: "E-Commerce Website",
-//     image: project1,
-//     description:
-//       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-//     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-//   },
-//   {
-//     title: "Task Management App",
-//     image: project2,
-//     description:
-//       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-//     technologies: ["HTML", "CSS", "Angular", "Firebase"],
-//   },
-//   {
-//     title: "Portfolio Website",
-//     image: project3,
-//     description:
-//       "A personal portfolio website showcasing projects, skills, and contact information.",
-//     technologies: ["HTML", "CSS", "React", "Bootstrap"],
-//   },
-//   {
-//     title: "Blogging Platform",
-//     image: project4,
-//     description:
-//       "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-//     technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-//   },
-// ];
+export const PROJECTS = [
+  {
+    title: "🔧 Banking System with Transaction APIs",
+    image: project1,
+    description:
+      "Developed a secure RESTful banking API with features like transfer, deposit, and balance checksImplemented using Spring Boot, PostgreSQL, OAuth2, and JWT for authentication and authorization.",
+    technologies: ["Spring Boot ", "PostgreSQL", "OAuth2 ", "JWT "],
+  },
+  {
+    title: "🎬 Online Movie Ticket Booking System",
+    image: project2,
+    description:
+      "Built a ticket booking backend with role-based access for users and admins.Included features like seat locking, schedule management, and secure booking flow.",
+    technologies: ["Java", "Spring Boot", "MongoDB", "WebSocket"],
+  },
+  {
+    title: "🚕 Ride Sharing Backend System",
+    image: project3,
+    description:
+      "Created a real-time ride-matching system using Spring Boot and MongoDB.Enabled live driver-rider tracking with WebSocket for instant location updates.",
+    technologies: ["Java", "Spring Boot", "MongoDB", "WebSocket"],
+  },
+];
 
 export const CONTACT = {
   address: "767 Fifth Avenue, New York, NY 10153 ",

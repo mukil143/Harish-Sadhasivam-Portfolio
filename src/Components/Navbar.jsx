@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className=" flex flex-shrink-0 items-center justify-center">
             <img   typeof='image/png' className="  w-12" src={Logo} alt="" />
         </div>
-        <ul className=' m-8 text-white flex items-center justify-center gap-4 text-2xl' >
+        <ul className=' my-8 text-white flex items-center justify-center gap-4 text-2xl' >
           <li className=''><FaLinkedin/></li>
           <li><FaGithub/></li>
           <li> <FaInstagram/></li>
