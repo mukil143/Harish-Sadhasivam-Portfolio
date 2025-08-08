@@ -30,12 +30,11 @@ const Hero = () => {
 
         <div className="w-full p-4  h-auto md:w-1/2  lg:max-w-1/2  ">
         <div className="flex justify-center">
-          <motion.img initial={{x:+200,opacity:0}}  animate={{x:0,opacity:1,transition:{duration:0.5,delay:0.8}}}  src="https://res.cloudinary.com/deif4iuok/image/upload/v1754552856/Heroimg_xrvnze.jpg" alt="" className='rounded-lg lg:w-3/4 shadow object-cover' />
+          <motion.img initial={{x:100,opacity:0}}  animate={{x:0,opacity:1}} transition={{duration:1,delay:1.2}}  src="https://res.cloudinary.com/deif4iuok/image/upload/v1754552856/Heroimg_xrvnze.jpg" alt="" className='rounded-lg lg:w-3/4 shadow object-cover' />
         </div>
         </div>  
         </div>
         <div className=" hidden md:block scroll-indicator">
-  
 </div>
 
 

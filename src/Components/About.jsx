@@ -2,6 +2,8 @@ import React from 'react'
 import hero from '../assets/Heroimg.jpeg'
 import About_img from '../assets/About_img.png'
 import {ABOUT_TEXT} from '../constants'
+import { motion } from "motion/react"
+
 const About = () => {
   return (
     <div className="   border-b border-neutral-900 pb-4  ">
@@ -9,12 +11,12 @@ const About = () => {
         <div className="flex flex-col md:flex-row lg:flex-row ">
             <div className="w-full lg:w-1/2 lg:p-8">
             <div className="flex items-center justify-center">
-                <img src={About_img} className='rounded-lg w-3/4 md:w-3/4 shadow '  alt="" />
+                <motion.img whileInView={{x:0,opacity:1}} initial={{x:-100,opacity:0}} transition={{duration:0.5,delay:1,type:'spring',stiffness:100}}  src={About_img} className='rounded-lg w-3/4 md:w-3/4 shadow '  alt="" />
             </div>
             </div>
             <div className="w-full md:w-3/4 lg:w-1/2 ">
             <div className="flex h-full items-start justify-center p-2 lg:justify-center ">
-                <p className='my-2 max-w-xl  font-light  text-left  line-height md:text-left text-lg  lg:text-lg tracking-tight'><span className='font-semibold tracking-normal'>👋 I'm Harish Sadhasivam</span>{ABOUT_TEXT}</p>
+                <motion.p whileInView={{x:0,opacity:1}} initial={{x:100,opacity:0}} transition={{duration:0.5,delay:1,type:'spring',stiffness:100}} className='my-2 max-w-xl  font-light  text-left  line-height md:text-left text-lg  lg:text-lg tracking-tight'><span className='font-semibold tracking-normal'>👋 I'm Harish Sadhasivam</span>{ABOUT_TEXT}</motion.p>
             </div>
             </div>
         </div>
