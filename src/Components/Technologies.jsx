@@ -24,7 +24,7 @@ const Technologies = () => {
 
   return (
     <div className= "border-b text-center flex flex-col  items-center border-neutral-900 pb-24  ">
-            <h2 className='text-4xl text-center my-20 font-light'>Technologies</h2>
+            <motion.h2 whileInView={{y:0,opacity:1}} initial={{y:-100,opacity:0}} transition={{duration:0.8,delay:0.5}}  className='text-4xl text-center my-20 font-light'>Technologies</motion.h2>
         <div className="grid grid-cols-2  md:grid-cols-5   gap-4 w-fit  items-center justify-center  transition-all duration-1000 ">
             <motion.div variants={iconvariants(2.5)} initial="initial" animate="animate" whileHover={{scale:1.1}} className=' flex items-center justify-center rounded-2xl border-4 border-neutral-700 p-4'>
              <div   className='h-15 w-15 md:w-20 md:h-20 '>
