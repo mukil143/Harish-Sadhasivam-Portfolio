@@ -3,6 +3,7 @@ import {HERO_CONTENT}  from '../constants'
 import hero from '../assets/Heroimg.jpeg'
 import { FaArrowDownLong } from "react-icons/fa6";
 import { motion } from "motion/react"
+import { TypingText } from './Typingtext';
 
 const Hero = () => {
   const container=(delay)=>({
@@ -17,7 +18,7 @@ const Hero = () => {
         <div className="flex flex-col justify-center items-center  md:items-start">
             <motion.h1 variants={container(0)} initial="hidden" animate="visible" className=' pb-10 lg:pb-16  text-4xl sm:text-5xl   md:text-6xl   font-thin letter-spacing tracking-wider lg:mt-12 lg:text-7xl'>Harish  Sadhasivam</motion.h1>
             <motion.span variants={container(0.4)} initial="hidden" animate="visible"  className="bg-gradient-to-r from-pink-300 text-2xl md:text-3xl lg:text-4xl tracking-tight via-slate-500 to-purple-500 bg-clip-text text-transparent">
-                Full Stack Developer
+                <TypingText/>
             </motion.span>
             <motion.p variants={container(0.8)} initial="hidden" animate="visible" className='my-2 max-w-xl py-6 font-light text-left  md:text-left text-lg   lg:text-lg tracking-tight' ><span className='text-2xl'>👋</span>  {HERO_CONTENT}</motion.p>
         </div>
