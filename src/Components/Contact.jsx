@@ -17,6 +17,7 @@ const sendEmail = (e) => {
     e.preventDefault();
     console.log(form.current);
     setShowtoast(true);
+    setIsSent(false);
 
     emailjs.sendForm(
       'service_owmwrt9',
@@ -26,7 +27,6 @@ const sendEmail = (e) => {
     ).then(
       (result) => {
         console.log(result.text);
-        
         setIsSent(true);
         setTimeout(() => {
             setShowtoast(false);
@@ -78,6 +78,7 @@ const sendEmail = (e) => {
       <div className='relative mb-4'>
         <input
           type='email'
+           name="reply_to"
           placeholder='Your Email'
           className='w-full bg-transparent rounded-md border border-stroke dark:border-dark-3 py-[10px] pr-3 pl-12 text-dark-6 outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2'
         />
@@ -95,8 +96,9 @@ const sendEmail = (e) => {
             </g>
           </svg>
         </span>
+        <input type="hidden" name="date" value={new Date().toLocaleString()}/>
       </div>
-            <MessageTextarea />
+            <MessageTextarea   />
              <button type="submit" className='bg-primary  cursor-pointer  border-primary border rounded-md inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium text-white hover:bg-[#1B44C8] hover:border-[#1B44C8] disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5 active:bg-[#1B44C8] active:border-[#1B44C8]'>
       Send
     </button>
@@ -107,7 +109,7 @@ const sendEmail = (e) => {
       
 
 {showtoast?(
-    <div id="toast-simple" class="  fixed right-5 top-5 flex items-center w-full max-w-xs  md:max-w-xs p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow-sm dark:text-gray-400 dark:divide-gray-700 dark:bg-gray-800" role="alert">
+    <div id="toast-simple" className="  fixed right-5 top-5 flex items-center w-full max-w-xs  md:max-w-xs p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow-sm dark:text-gray-400 dark:divide-gray-700 dark:bg-gray-800" role="alert">
     <svg class="w-5 h-5 text-blue-600 dark:text-blue-500 rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"/>
     </svg>
@@ -140,6 +142,7 @@ const MessageTextarea = () => {
       <div className='relative'>
         <textarea
           type='email'
+          name="message"
           rows='6'
           placeholder='Type your message'
           className='w-full mb-4 bg-transparent rounded-md border border-stroke dark:border-dark-3 p-3 pl-12 text-dark-6 outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2'
