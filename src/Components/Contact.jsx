@@ -41,6 +41,7 @@ const sendEmail = (e) => {
         console.log(result.text);
         setIsSent(true);
         handleclear();
+        
         setTimeout(() => {
             setShowtoast(false);
         }, 2000);
