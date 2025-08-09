@@ -1,6 +1,6 @@
 {
-  "name": "Your App Name",
-  "short_name": "AppName",
+  "name": "Harish Sadhasivam Portfolio",
+  "short_name": "Portfolio",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,8 +13,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#0b0014",
+  "background_color": "#0b0014",
   "display": "standalone",
   "start_url": "/",
   "orientation": "portrait"
