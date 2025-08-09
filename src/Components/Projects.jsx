@@ -12,7 +12,7 @@ const Projects = () => {
     visible:{x:0,opacity:1,transition:{duration:0.5,delay:delay}}
   })
   return (
-    <div className=' border-b    border-neutral-900 pb-8 lg:mb-36'>
+    <div className=' border-b    border-neutral-900 pb-8 '>
         <h2 className='text-4xl text-center my-20 font-light'>Projects</h2>
          <div className='' >
                     {PROJECTS.map((project,idx)=>(
