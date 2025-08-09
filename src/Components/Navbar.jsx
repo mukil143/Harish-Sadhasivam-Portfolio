@@ -15,7 +15,7 @@ const Navbar = () => {
           <li className=''><a target='_blank' href="https://www.linkedin.com/in/harish-s-066033179/"><FaLinkedin/></a></li>
           <li><a href="https://github.com/HarishSadhasivam"><FaGithub/></a></li>
           <li><a href=""></a> <FaInstagram/></li>
-          <li> <a  href="mailto:mukilanmukilan174@gmail.com?subject=Hello&body=Hi there!">
+          <li> <a  href="mailto:erodeharish07@gmail.com?subject=Hello&body=Hi there!">
         <FaEnvelope  />
       </a></li>
         </ul>
