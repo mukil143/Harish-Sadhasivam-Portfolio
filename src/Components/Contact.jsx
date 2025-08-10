@@ -29,8 +29,7 @@ const sendEmail = (e) => {
     setIsSent(false);
 
 
-
-
+    try{
     emailjs.sendForm(
       'service_owmwrt9',
       'template_muqi0gr',
@@ -38,7 +37,6 @@ const sendEmail = (e) => {
       'kaWKRWf_7SuxDCN7-'      // This is your user ID or public key
     ).then(
       (result) => {
-        console.log(result.text);
         setIsSent(true);
         handleclear();
         
@@ -56,6 +54,13 @@ const sendEmail = (e) => {
         
       }
     );
+  } catch (error) {
+        console.error("Error sending email:", error);
+        setIsSent(false);
+        setTimeout(() => {
+            setShowtoast(false);
+        }, 1000);
+    }
   };
   return (
     <section className='pb-12 h-screen dark:bg-dark'>
@@ -70,6 +75,7 @@ const sendEmail = (e) => {
       <div className='relative mb-4'>
         <input
         value={name}
+        required
         onChange={(e) => setName(e.target.value)}
           type="text" name="from_name" placeholder="Your Name"
           className='  bg-white/10  backdrop-blur-none w-full  rounded-md border border-stroke dark:border-dark-3 py-[10px] pr-3 pl-12 text-dark-6 outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2'
@@ -94,6 +100,7 @@ const sendEmail = (e) => {
       </label>
       <div className='relative mb-4'>
         <input
+        required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
           type='email'
@@ -117,7 +124,7 @@ const sendEmail = (e) => {
         </span>
         <input type="hidden" name="date" value={new Date().toLocaleString()}/>
       </div>
-            <MessageTextarea  message={message} setMessage={setMessage} />
+            <MessageTextarea   message={message} setMessage={setMessage} />
              <button type="submit" className='bg-primary  cursor-pointer  border-primary border rounded-md inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium text-white hover:bg-[#1B44C8] hover:border-[#1B44C8] disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5 active:bg-[#1B44C8] active:border-[#1B44C8]'>
       Send
     </button>
@@ -160,6 +167,7 @@ const MessageTextarea = ({message,setMessage}) => {
       </label>
       <div className='relative'>
         <textarea
+        required
         value={message}
         onChange={(e) => setMessage(e.target.value)}
           type='email'
